@@ -18,8 +18,8 @@ namespace McShares_API.Controllers
         [HttpGet("gettoken")]
         public Object GetToken()
         {
-            string key = "my_secret_key_12345"; //Secret key which will be used later during validation    
-            var issuer = "http://mysite.com";  //normally this will be your site URL    
+            string key = "my_secret_key_12345";     
+            var issuer = "http://localhost:52114"; 
 
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
